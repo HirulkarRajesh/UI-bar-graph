@@ -14,11 +14,11 @@ NPM have installed on machine.
 
 ## Instructions
 
--Run Server code
-    -Go to server folder of project in Commond prompt for ex:- d:\myproject\server.
-    -Run comond npm install (it's used for install all required packges).if find any error for required pakchge 
-    -Run commond npm instll <missing pakcge name>.If there is no error server will start.
--Run Client code
-   -Go to html folder and open index.html in browser.
+Run Server code
+    - Go to server folder of project in Commond prompt for ex:- d:\myproject\server.
+    - Run comond npm install (it's used for install all required packges).if find any error for required pakchge 
+    - Run commond npm instll <missing pakcge name>.If there is no error server will start.
+Run Client code
+   - Go to html folder and open index.html in browser.
 
 
