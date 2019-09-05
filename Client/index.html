@@ -1,0 +1,67 @@
+<html>
+    <title></title>
+    <head>
+     <link href="./css/app.css" rel="stylesheet">
+     <!--Load Jquery fron CDN-->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> -->
+    <!--Load local jQuery-->    
+    <script src="./scripts/jquery-3.4.1.min.js"></script>
+    <script src="./scripts/customChart.js"></script>
+        <script>
+        $(document).ready(function(){
+            $.ajax({
+                url:"http://localhost:3000/readData",
+                success:function(data){
+                    $('.container').generateChart({
+                        name: 'Bar Chart',
+                        bgcolor: 'orange',
+                        xmaxValue:100,
+                        barColor:"blue",
+                        width:800,
+                        height:600,
+                        data:data.data
+                    });
+                },
+                error:function(error){
+                    $('.container').empty();
+                    var errorStr="";
+                    if(error.status==404){
+                        errorStr='<div style="">NO records found.</div>';
+                    }else if(error.status==0){
+                        errorStr='<div style="">Internal server error</div>';
+                        
+                    }else{
+                        errorStr='<div style="">NO records found.</div>';
+                    }
+                    $('.container').append(errorStr);
+                }
+                
+            })
+            
+        })
+        function loadstaticData(){
+            $('.container').generateChart({
+                        name: 'Barchart',
+                        bgcolor: 'orange',
+                        xmaxValue:100,
+                        barColor:"green",
+                        width:800,
+                        Height:600,
+                        data:[49, 8, 23, 57, 94, 78]
+                    });
+        } 
+        </script>
+        
+    </head>
+    <body>
+        <div class="container">        
+        </div>
+        <div>
+
+        </div>
+        <div style="margin: 10px;border: 1px solid;border-radius: 3px;background-color: #ffcdcd;width: 150px;">
+            <span onclick="loadstaticData()"  >Load Static chart</span>
+        </div>
+    </body>
+</html>

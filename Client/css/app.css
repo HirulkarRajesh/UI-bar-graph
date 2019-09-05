@@ -1,0 +1,48 @@
+.container{
+    width: 500px;
+    height: 500px;
+    background-color:whitesmoke;
+}
+.chartName{
+    position: relative;
+    left: 50%;
+    top: 50%;
+}
+.error{
+    position: relative;
+    left: 50%;
+    top: 50%;
+}
+.xaxis{
+    width: 20%;
+    height: 80%; 
+    border-right: 1px solid;
+    float: left;
+}
+.yaxis{
+    width: 100%;
+    height:20%;
+    border-top: 1px solid;
+    float: left;
+    
+}
+.grapharea{
+    width: 79%;
+    height: 80%;
+    float: left;
+    position: relative;
+
+}
+.xrage{
+    width: 100%;
+    height: 10%;
+    text-align: right;
+    margin-top: -1px;
+}
+.bar{
+    position: absolute;
+    bottom: -1;
+    border: 0.5px solid;
+    text-align: center;
+    
+}
